@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/pages.dart';
+import 'package:kevin_navigationjs/pages/pages.dart';
 
 void main() {
   runApp(
