@@ -30,8 +30,10 @@ class ItemPage extends StatelessWidget {
                       fit: BoxFit.fitHeight, width: 500, height: 200),
                 ),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 2, horizontal: 156),
+                  padding: const EdgeInsets.symmetric(
+                    vertical: 2,
+                    horizontal: 226,
+                  ),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
@@ -50,13 +52,13 @@ class ItemPage extends StatelessWidget {
               children: [
                 Container(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 2, horizontal: 156),
+                        vertical: 2, horizontal: 210),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: Colors.black,
                       ),
                     ),
-                    child: Text(itemArgs.price.toString())),
+                    child: Text('Harga : ' + itemArgs.price.toString())),
               ],
             ),
           ],
