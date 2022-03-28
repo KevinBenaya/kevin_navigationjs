@@ -15,6 +15,7 @@ class ItemPage extends StatelessWidget {
       body: Container(
         margin: const EdgeInsets.all(8),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               itemArgs.name,
@@ -23,7 +24,12 @@ class ItemPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-            Text(itemArgs.price.toString()),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(itemArgs.price.toString()),
+              ],
+            ),
           ],
         ),
       ),
