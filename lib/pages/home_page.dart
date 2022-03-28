@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:kevin_navigationjs/models/item.dart';
+import 'package:kevin_navigationjs/widgets/list_item.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -22,20 +23,12 @@ class HomePage extends StatelessWidget {
           itemCount: items.length,
           itemBuilder: (context, index) {
             final item = items[index];
-            return Card(
-              child: Container(
-                margin: EdgeInsets.all(8),
-                child: Row(
-                  children: [
-                    Expanded(child: Text(item.name)),
-                    Expanded(
-                      child: Text(
-                        item.price.toString(),
-                        textAlign: TextAlign.end,
-                      ),
-                    ),
-                  ],
-                ),
+            return InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, '/item');
+              },
+              child: ListItem(
+                item: item,
               ),
             );
           },
