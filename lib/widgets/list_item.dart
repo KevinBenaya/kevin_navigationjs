@@ -14,7 +14,7 @@ class ListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: Row(
           children: [
             Expanded(child: Text(item.name)),
