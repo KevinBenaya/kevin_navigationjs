@@ -17,17 +17,46 @@ class ItemPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              itemArgs.name,
-              style: const TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                    ),
+                  ),
+                  child: Image.asset(itemArgs.img,
+                      fit: BoxFit.fitHeight, width: 500, height: 200),
+                ),
+                Container(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 2, horizontal: 156),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                    ),
+                  ),
+                  child: Text(
+                    itemArgs.name,
+                    style: const TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(itemArgs.price.toString()),
+                Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 2, horizontal: 156),
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: Colors.black,
+                      ),
+                    ),
+                    child: Text(itemArgs.price.toString())),
               ],
             ),
           ],

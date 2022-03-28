@@ -6,8 +6,8 @@ import 'package:kevin_navigationjs/widgets/list_item.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
   final List<Item> items = [
-    Item(name: 'Sugar', price: 5000),
-    Item(name: 'Salt', price: 2000)
+    Item(name: 'Sugar', price: 5000, img: 'assets/images/Sugar.png'),
+    Item(name: 'Salt', price: 2000, img: 'assets/images/Salt.png')
   ];
 
   @override
@@ -17,9 +17,9 @@ class HomePage extends StatelessWidget {
         title: const Text('Shopping List'),
       ),
       body: Container(
-        margin: EdgeInsets.all(8),
+        margin: const EdgeInsets.all(8),
         child: ListView.builder(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           itemCount: items.length,
           itemBuilder: (context, index) {
             final item = items[index];
