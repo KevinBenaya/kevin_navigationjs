@@ -7,7 +7,7 @@ class ItemPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Item itemArgs = ModalRoute.of(context).settings.arguments;
+    final Item itemArgs = ModalRoute.of(context)!.settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Shopping List'),
@@ -23,10 +23,10 @@ class ItemPage extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
-
+            Text(itemArgs.price.toString()),
           ],
         ),
       ),
-    )
+    );
   }
 }
