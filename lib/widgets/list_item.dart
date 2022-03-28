@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:kevin_navigationjs/models/item.dart';
 
 class ListItem extends StatelessWidget {
-  const ListItem({Key? key, required this.item}) : super(key: key);
+  const ListItem({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
 
   final Item item;
 
