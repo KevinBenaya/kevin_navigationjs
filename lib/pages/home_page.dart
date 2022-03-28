@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:kevin_navigationjs/models/item.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
   final List<Item> items = [
     Item(name: 'Sugar', price: 5000),
     Item(name: 'Salt', price: 2000)
